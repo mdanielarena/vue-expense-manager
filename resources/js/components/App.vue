@@ -2,7 +2,7 @@
    <div>
        <Nav/>
        <div class="page">
-           <Header/>
+           <Header v-bind:logoutText="logoutText"/>
            <router-view/>
            <Footer/>
         </div>
@@ -18,7 +18,8 @@ import Footer from './layouts/Footer'
 export default {
     data() {
         return {
-            loggedIn: localStorage.getItem('loggedIn')
+            loggedIn: localStorage.getItem('loggedIn'),
+            logoutText: 'Logout'
         }
     },
     components: {

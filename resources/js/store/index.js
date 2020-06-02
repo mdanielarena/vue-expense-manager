@@ -6,6 +6,7 @@ import expenseCategories from './modules/expenseCategories'
 import expense from './modules/expenses'
 import resetPassword from './modules/resetPassword'
 import login from './modules/login'
+import dashboard from './modules/dashboard'
 
 Vue.use(Vuex)
 
@@ -16,6 +17,7 @@ export default new Vuex.Store({
         expenseCategories,
         expense,
         resetPassword,
-        login
+        login,
+        dashboard
     }
 })

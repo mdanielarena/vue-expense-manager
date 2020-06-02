@@ -39,6 +39,14 @@ Route::patch('/expense-categories-update','ExpenseCategories@update');
 
 //expenses
 Route::get('/expenses','Expense@fetchData');
+Route::post('/expenses-add','Expense@store');
+Route::delete('/expenses-delete','Expense@destroy');
+Route::patch('/expenses-update','Expense@update');
+
+//dashboard
+Route::get('/dashboard','Dashboard@fetchExpenses');
+
+
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

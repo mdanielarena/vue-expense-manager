@@ -47,7 +47,8 @@ export default {
                 }
 
                 axios.post('/api/login',postData).then(response2 => {
-                    if(response2.data) {
+                    if(response2.data) { 
+                       localStorage.setItem('role',response2.data.role_id)
                        localStorage.setItem('loggedIn','true')
                        this.$router.push({name: 'Dashboard'})
                     }

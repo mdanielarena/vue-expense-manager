@@ -6,6 +6,7 @@ import store from './store/index'
 
 window.Vue = require('vue');
 window.axios = require('axios');
+window.jquery = require('jquery')
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
